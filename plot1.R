@@ -1,0 +1,8 @@
+install.packages("dplyr")
+library(dplyr)
+input <- read.csv("exdata-data-household_power_consumption/household_power_consumption.txt", sep =";", header=TRUE,colClasses="character")
+input1 <- tbl_df(input)
+input2 <- filter(input1, Date=="1/2/2007" | Date =="2/2/2007")
+png(file="plot1.png",width = 480, height = 480)
+hist(as.numeric(input2$Global_active_power), xlab = "Global Active Power(kilowatts)",main="Global Active Power", col="red")
+dev.off()
