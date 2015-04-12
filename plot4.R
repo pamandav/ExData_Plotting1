@@ -12,5 +12,6 @@ with(input5,plot(input5$Date,input5$Sub_metering_1, type="l", ylab = "Energy sub
 with(input5,points(input5$Date,input5$Sub_metering_1,col="black",type="l"))
 with(input5,points(input5$Date,input5$Sub_metering_2,col="red",type="l"))
 with(input5,points(input5$Date,input5$Sub_metering_3,col="blue",type="l"))
+legend("topright",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col=c("black","red","blue"),lty=c(1,1,1))
 plot(input5$Date,input5$Global_reactive_power,xlab = "datetime", type="l", ylab="Global_reactive_power")
 dev.off()
