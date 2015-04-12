@@ -1,3 +1,4 @@
+require(dplyr)
 input <- read.csv("exdata-data-household_power_consumption/household_power_consumption.txt", sep =";", header=TRUE,colClasses="character")
 input1 <- tbl_df(input)
 input2 <- filter(input1, Date=="1/2/2007" | Date =="2/2/2007")
